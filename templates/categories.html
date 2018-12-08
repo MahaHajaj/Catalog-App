@@ -1,0 +1,56 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner main">
+   <div class="col-lg-11 col-lg-offset-1 padding-none">
+      <h1>Catalog App</h1>
+   </div>
+</div>
+<div class = 'flash'>
+   {% with messages = get_flashed_messages() %}
+   {% if messages %}
+   <ul>
+      {% for message in messages %}
+      <li>
+         <strong> {{ message }} </strong>
+      </li>
+      {% endfor %}
+   </ul>
+   {% endif %}
+   {% endwith %}
+</div>
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <h2>Categories</h2>
+            <hr class="style">
+            {% for category in categories %}
+            <a href = "{{url_for('showItems', category_name = category.name)}}">
+               <h3>{{category.name}}</h3>
+            </a>
+            {% endfor %}
+         </div>
+         <div class="col-lg-6">
+            <h2>Latest Items</h2>
+            <hr class="style">
+            {% for item in items %}
+            <a href = "{{url_for('showDescription', category_name = item.category.name , item_name=item.name)}}">
+               <div>
+                  <h3>{{item.name}}
+                     <small>({{item.category.name}})</small>
+                  </h3>
+               </div>
+            </a>
+            {% endfor %}
+            <hr class="style">
+            <a href="{{url_for('newItem')}}">
+               <div>
+                  <h3>Add item</h3>
+               </div>
+            </a>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

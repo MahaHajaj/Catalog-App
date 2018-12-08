@@ -1,0 +1,150 @@
+* {
+	font-family: "Helvetica Neue Bold", Unlock, Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+h1 {
+	font-family: "Helvetica Neue Light", Unlock, Helvetica, Arial, sans-serif;
+	font-size: 50px;
+	color: #4a4c41;
+	line-height: 60px;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 40px;
+	color: #737564;
+	line-height: 29px;
+}
+
+h3 {
+	font-size: 18px;
+	color: #7a9091;
+	line-height: 23px;
+}
+ p {
+ 	font-family: "Helvetica Neue", Unlock, Helvetica, Arial, sans-serif;
+ 	font-size: 16px;
+ 	color: #616161;
+ 	line-height: 24px;
+ 	font-weight: 400;
+ }
+
+ strong {
+ 	font-size: 16px;
+ 	color: #7a9091;
+ 	line-height: 24px;
+ }
+
+ a {
+ 	font-size: 14px;
+ 	color: #616161;
+ 	line-height: 17px;
+ }
+
+ hr.style {
+	 height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+    border: 0;
+ }
+ .sep {
+	 height: 10px;
+   border-left: 1px solid gray;
+   float: left;
+   opacity: 0.5;
+   margin: 0 15px;
+}
+.row.vdivide :not(:last-child):after {
+  background: #e0e0e0;
+  width: 1px;
+  content: "";
+  display:block;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  right: 0;
+  min-height: 10px;
+}
+
+.padding-top {
+	padding-top: 30px;
+}
+.padding-bottom {
+	padding-bottom: 30px;
+}
+.margin-right {
+	margin-right: 30px;
+}
+.padding-none {
+	padding: 0;
+}
+.btn {
+	padding: 10px;
+	margin: 0;
+	border-color: #616161;
+	border-width: 2px;
+	color: #616161;;
+}
+.btn:hover {
+	border-color: #616161;
+}
+.btn.delete {
+	border-color: #616161;
+	color: #616161;
+}
+.btn.delete:hover {
+	border-color: #616161;
+	color: #190000;
+}
+.banner.main {
+	height: 150px;
+	background-position: right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #9E9E9E;
+}
+.banner h1 {
+	margin: 45px 0;
+}
+.top-header {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.top-header p {
+	margin-bottom: 0;
+	line-height: 16px;
+}
+.top-header a {
+	margin-bottom: 0;
+	line-height: 16px;
+	font-size: 16px;
+	color: #7B7573;
+	font-weight: 400;
+}
+.creator {
+	padding-right: 20px;
+	margin-top: -20px;
+	text-align: right;
+	float:right;
+}
+.creator img {
+	width: 100px;
+	border-radius: 50%;
+}
+.creator figcaption {
+	font-size: 14px;
+	color: #7B7573;
+	font-weight: 400;
+	margin-top: -20px;
+}
+.flash {
+	background-color: #e0e2e4;
+	width:100%;
+	text-decoration: none;
+
+}
+.flash li {
+	list-style-type: none;
+	text-align: center;
+
+}

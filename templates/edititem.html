@@ -1,0 +1,78 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner main">
+   <div class="col-lg-11 col-lg-offset-1 padding-none">
+      <h1>Catalog App</h1>
+   </div>
+</div>
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <h2>Edit Menu Item</h2>
+            <form action="#" method = "post">
+               <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type ="text" maxlength="100" class="form-control" name="name" value="{{item.name }}">
+                  <label for="description">Description:</label>
+                  <textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
+                  <label for="course">Category:</label>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category2" value="Soccer" {% if category_name == 'Soccer'%}checked{%endif%}>Soccer
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category3" value="Snowboarding"{% if category_name == 'Snowboarding'%}checked{%endif%}>Snowboarding
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category4" value="Skating" {% if category_name == 'Skating'%}checked{%endif%}>Skating
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category5" value="Rock Climbing" {% if category_name == 'Rock Climbing'%}checked{%endif%}>Rock Climbing
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category6" value="Hockey" {% if category_name == 'Hockey'%}checked{%endif%}>Hockey
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category7" value="Hang gliding" {% if category_name == 'Hang gliding'%}checked{%endif%}>Hang gliding
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category8" value="Frisbee" {% if category_name == 'Frisbee'%}checked{%endif%}>Frisbee
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category9" value="Foosball" {% if category_name == 'Foosball'%}checked{%endif%}>Foosball
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category10" value="Basketball" {% if category_name == 'Basketball'%}checked{%endif%}>Basketball
+                     </label>
+                  </div>
+                  <div class="radio">
+                     <label>
+                     <input type="radio" name="category" id="category11" value="Baseball" {% if category_name == 'Baseball'%}checked{%endif%}>Baseball
+                     </label>
+                  </div>
+                  <button type="submit" class="btn btn-default" id="submit" type="submit">Edit</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}
