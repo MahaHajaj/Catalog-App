@@ -1,4 +1,4 @@
-#Catalog Application
+# Catalog Application
 The second project in Udacity's full stack web development nanodegree program
 The aim of the project is building an list of items within a variety of categories .
 
