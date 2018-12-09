@@ -18,56 +18,13 @@
                   <label for="description">Description:</label>
                   <textarea class="form-control" maxlength="250" rows="3" name="description">{{item.description}}</textarea>
                   <label for="course">Category:</label>
+                  {% for category in categories %}
                   <div class="radio">
                      <label>
-                     <input type="radio" name="category" id="category2" value="Soccer" {% if category_name == 'Soccer'%}checked{%endif%}>Soccer
+                     <input type="radio" required name="category" value="{{category.name}}" {% if category == item.category %}checked{%endif%}>{{category.name}}
                      </label>
                   </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category3" value="Snowboarding"{% if category_name == 'Snowboarding'%}checked{%endif%}>Snowboarding
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category4" value="Skating" {% if category_name == 'Skating'%}checked{%endif%}>Skating
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category5" value="Rock Climbing" {% if category_name == 'Rock Climbing'%}checked{%endif%}>Rock Climbing
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category6" value="Hockey" {% if category_name == 'Hockey'%}checked{%endif%}>Hockey
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category7" value="Hang gliding" {% if category_name == 'Hang gliding'%}checked{%endif%}>Hang gliding
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category8" value="Frisbee" {% if category_name == 'Frisbee'%}checked{%endif%}>Frisbee
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category9" value="Foosball" {% if category_name == 'Foosball'%}checked{%endif%}>Foosball
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category10" value="Basketball" {% if category_name == 'Basketball'%}checked{%endif%}>Basketball
-                     </label>
-                  </div>
-                  <div class="radio">
-                     <label>
-                     <input type="radio" name="category" id="category11" value="Baseball" {% if category_name == 'Baseball'%}checked{%endif%}>Baseball
-                     </label>
-                  </div>
+                  {% endfor %}
                   <button type="submit" class="btn btn-default" id="submit" type="submit">Edit</button>
                </div>
             </form>

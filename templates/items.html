@@ -24,11 +24,18 @@
             <h2>Categories</h2>
             <hr class="style">
             {% for category in categories %}
-            <a href = "{{url_for('showcategories', category_name = category.name)}}">
+            <a href = "{{url_for('showItems', category_name = category.name)}}">
                <h3>{{category.name}}</h3>
             </a>
             {% endfor %}
-         </div>
+            <hr class="style">
+            <div class="inline">
+            <a href="{{url_for('editCategory' , category_name = category.name)}}">
+              <h3>Edit Category</h3></a> <h3> . <h3>
+            <a href="{{url_for('deleteCategory' , category_name = category.name)}}">
+              <h3>Delete Category</h3>
+            </a></div>
+               </div>
          <div class="col-lg-6">
             <h2>{{category.name}} Items</h2>
             <hr class="style">

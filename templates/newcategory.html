@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner main">
+   <div class="col-lg-11 col-lg-offset-1 padding-none">
+      <h1>Catalog App</h1>
+   </div>
+</div>
+<div class="jumbotron">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6">
+            <h2>New Category</h2>
+            <form action="#" method = "post">
+               <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input type ="text" maxlength="50" class="form-control" name="name"placeholder="Name of the Category" required>
+               </div>
+               <div>
+                  <button type="submit" class="btn btn-default" id="submit" type="submit">Create</button>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

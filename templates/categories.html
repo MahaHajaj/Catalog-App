@@ -6,19 +6,7 @@
       <h1>Catalog App</h1>
    </div>
 </div>
-<div class = 'flash'>
-   {% with messages = get_flashed_messages() %}
-   {% if messages %}
-   <ul>
-      {% for message in messages %}
-      <li>
-         <strong> {{ message }} </strong>
-      </li>
-      {% endfor %}
-   </ul>
-   {% endif %}
-   {% endwith %}
-</div>
+{% include "flash.html" %}
 <div class="jumbotron">
    <div class="container">
       <div class="row">
@@ -30,6 +18,12 @@
                <h3>{{category.name}}</h3>
             </a>
             {% endfor %}
+            <hr class="style">
+            <a href="{{url_for('newcategory')}}">
+               <div>
+                  <h3>Add Category</h3>
+               </div>
+            </a>
          </div>
          <div class="col-lg-6">
             <h2>Latest Items</h2>
