@@ -36,4 +36,4 @@ The aim of the project is building an list of items within a variety of categori
 4. Setup application database ```python database_setup.py```.
 5. Insert data ```python3 lotsofitem.py```.
 6. Run the python file using ```python application.py```.
-7. Access the application locally using [localhost:8000] (http://localhost:8000) .
+7. Access the application locally using http://localhost:8000 .
