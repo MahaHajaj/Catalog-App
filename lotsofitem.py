@@ -22,7 +22,7 @@ User1 = User(name="Maha", email="maho,th16@gmail.com")
 session.add(User1)
 session.commit()
 
-category1 = Category(name="Soccer")
+category1 = Category(user_id=2, name="Soccer")
 
 session.add(category1)
 session.commit()
